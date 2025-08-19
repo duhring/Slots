@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here Come Slots - Video Highlights</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .video-container {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        .highlights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+        
+        .highlight-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            color: white;
+            cursor: pointer;
+            position: relative;
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.15);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+        }
+        
+        .highlight-card:active {
+            transform: translateY(-3px);
+        }
+        
+        .thumbnail {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .placeholder-thumbnail {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            opacity: 0.7;
+        }
+        
+        .summary {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 15px;
+            min-height: 80px;
+        }
+        
+        .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.8;
+            margin-bottom: 10px;
+        }
+        
+        .watch-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(238, 90, 36, 0.3);
+        }
+        
+        .watch-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(238, 90, 36, 0.4);
+        }
+        
+        .youtube-thumbnail {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .watch-btn {
+            background: none;
+            border: none;
+            font: inherit;
+            cursor: pointer;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .highlights-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Here Come Slots</h1>
+            <p>Key highlights from the video</p>
+        </div>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe id="youtube-player" src="https://www.youtube.com/embed/MmVmfdB8In0?enablejsapi=1" 
+                        allowfullscreen></iframe>
+            </div>
+        </div>
+        
+        <div class="highlights-grid">
+
+            <div class="highlight-card" data-timestamp="5">
+                <img src="thumbnail_001.jpg" alt="Thumbnail 1" class="thumbnail">
+                <div class="summary"> QC Cam Presenter 3.2 has a game-changing new feature that I think is going to new feature. Slots lets you instantly share your favorite apps and screens with a click or a keystroke or a button on your stream keystroke.</div>
+                <div class="timestamp">Starts at 00:05</div>
+                <button class="watch-btn">Watch Segment</button>
+            </div>
+
+            <div class="highlight-card" data-timestamp="128">
+                <img src="thumbnail_002.jpg" alt="Thumbnail 2" class="thumbnail">
+                <div class="summary">It's not it doesn't navigate as well. It's just quite hard to clutter and it's justquite hard to navigate. I've got like multiple profiles in here. And you see we've also got like these sort of one-off videos. They're like never again,</div>
+                <div class="timestamp">Starts at 02:08</div>
+                <button class="watch-btn">Watch Segment</button>
+            </div>
+
+            <div class="highlight-card" data-timestamp="245">
+                <img src="thumbnail_003.jpg" alt="Thumbnail 3" class="thumbnail">
+                <div class="summary">When you click on that, you get all your different shares. You can see any Apple devices that are plugged in. And you can share all the different cameras. And then you can also bring up a blank board if you want.</div>
+                <div class="timestamp">Starts at 04:05</div>
+                <button class="watch-btn">Watch Segment</button>
+            </div>
+
+            <div class="highlight-card" data-timestamp="360">
+                <img src="thumbnail_004.jpg" alt="Thumbnail 4" class="thumbnail">
+                <div class="summary">The Stream now has nine slots. The Stream Deck plugin gives you a load slot button, which you can then drag one slot button into. And you slots into Stream Deck buttons. It's going to pick up multiple apps.</div>
+                <div class="timestamp">Starts at 06:00</div>
+                <button class="watch-btn">Watch Segment</button>
+            </div>
+
+        </div>
+        
+        <div class="footer">
+            <p>Generated with YouTube Highlight Generator</p>
+        </div>
+    </div>
+    
+    <script>
+        let player;
+        let playerReady = false;
+        
+        // Load YouTube IFrame API
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        
+        // YouTube API callback
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('youtube-player', {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onError': onPlayerError
+                }
+            });
+        }
+        
+        function onPlayerReady(event) {
+            playerReady = true;
+            console.log('YouTube player ready');
+            setupCardClickHandlers();
+        }
+        
+        function onPlayerError(event) {
+            console.error('YouTube player error:', event.data);
+            // Fall back to basic method
+            playerReady = false;
+        }
+        
+        function seekToTime(seconds) {
+            console.log('Seeking to:', seconds, 'seconds');
+            
+            if (playerReady && player && player.seekTo) {
+                // Use YouTube API
+                player.seekTo(seconds, true);
+                player.playVideo();
+            } else {
+                // Fallback: reload iframe with timestamp
+                const iframe = document.getElementById('youtube-player');
+                const src = iframe.src;
+                const baseUrl = src.split('?')[0];
+                iframe.src = baseUrl + '?enablejsapi=1&start=' + seconds + '&autoplay=1';
+            }
+            
+            // Smooth scroll to video
+            document.querySelector('.video-container').scrollIntoView({
+                behavior: 'smooth',
+                block: 'center'
+            });
+        }
+        
+        function setupCardClickHandlers() {
+            // Make entire cards clickable
+            document.querySelectorAll('.highlight-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    // Don't trigger if clicking a link inside the card
+                    if (e.target.tagName === 'A') return;
+                    
+                    const timestamp = parseInt(this.getAttribute('data-timestamp'));
+                    if (!isNaN(timestamp)) {
+                        seekToTime(timestamp);
+                    }
+                });
+            });
+        }
+        
+        // Set up handlers when DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            // Try to set up handlers immediately
+            setupCardClickHandlers();
+            
+            // Also try again after a delay in case player loads slowly
+            setTimeout(setupCardClickHandlers, 2000);
+        });
+    </script>
+</body>
+</html>
