@@ -58,22 +58,52 @@ python3 easy_highlights.py
 python3 editorial_highlights.py
 ```
 
-### Testing
+### Advanced All-in-One Processing
+```bash
+python3 one_command_highlights.py
+```
+
+### Programmatic API Usage
+```bash
+python3 generate_video_cards.py \
+    "https://youtu.be/VIDEO_ID" \
+    transcript.vtt \
+    --description "Video Title" \
+    --keywords intro demo conclusion \
+    --cards 4 \
+    --output-dir highlights
+```
+
+### Testing Commands
 ```bash
 # Test basic functionality
 python3 test_quick.py
 
-# Test editorial features
+# Test editorial features  
 python3 test_editorial.py
+
+# Test specific components
+python3 test_transcription.py
+python3 test_smart_thumbnails.py
+python3 test_video_click.py
 ```
 
-### Manual Transcript Operations
+### Utility Commands
 ```bash
-# Download transcript only
+# Manual transcript operations
 yt-dlp --skip-download --write-subs --sub-lang en --sub-format vtt -o "%(title)s.%(ext)s" URL
 
-# Convert raw text to VTT
+# Convert raw text to VTT format
 python3 transcript_converter.py
+
+# Create distinct thumbnails
+python3 create_distinct_thumbnails.py
+
+# Extract screenshots at specific timestamps
+python3 extract_timecode_screenshots.py
+
+# Fix visual distinction issues
+python3 fix_visual_distinction.py
 ```
 
 ### Local Preview
@@ -86,6 +116,10 @@ cd output_directory && python3 -m http.server 8000
 ```bash
 pip3 install --user -r requirements.txt
 ```
+
+### Known Compatibility Issues
+- `openai-whisper` may not support Python 3.11+ - remove from requirements.txt if needed
+- Core functionality works without openai-whisper dependency
 
 Key packages:
 - `yt-dlp` - YouTube transcript downloading
@@ -133,6 +167,25 @@ Output folders follow pattern: `{name}_{timestamp}/`
 ### GitHub Pages (via editorial_highlights.py)
 - Automatic deployment to `https://[username].github.io/[repo]/[path]/`
 - Default path structure: `YYYY-MM/descriptive-name/`
+
+## Performance Expectations
+
+- **Processing Time**: ~3-4 minutes for typical YouTube video
+- **Memory Requirements**: ~4GB RAM for AI models (BART)
+- **Output Quality**: Professional HTML with glass-morphism effects, responsive design
+- **Thumbnail Quality**: High-quality frames extracted from video
+
+## Known Issues & Limitations
+
+### Common Issues
+- **Title showing "None"**: Video title extraction may fail, affects display only
+- **Video embedding failures**: Expected for some videos due to YouTube restrictions
+- **Video download failures**: System continues with transcript-only processing
+
+### Compatibility Notes
+- Python 3.11+ may have issues with openai-whisper dependency
+- All core functionality works without optional dependencies
+- System provides graceful fallbacks for missing tools
 
 ## Key Architectural Patterns
 
